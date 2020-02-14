@@ -1,0 +1,76 @@
+.row {
+    margin-top: 50px;
+}
+
+.btn-danger {
+    margin-top: 25px;
+}
+
+.text-area {
+    margin-left: 35px;
+}
+
+.custom-control-label::before {
+    margin-top: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fa {
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.fa-trash {
+    color: #dc3545;
+}
+
+.fa-thumbs-up {
+    color: #20be44b8;
+}
+
+.fa-thumbs-down {
+    color: #dc3545;
+    margin-top: 2px;
+}
+
+em {
+    color: #dc3545;
+    cursor: pointer;
+}
+
+ol {
+    list-style-type: decimal;
+    
+}
+
+li {
+    /* width: 250px; */
+    display: flex;
+}
+
+.icon-block {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.attention-block {
+    height: 20px;
+}
+
+.attention {
+    display: none;
+    color: red
+}
+
+p {
+    display: flex;
+}
+
+span {
+    text-decoration: none;
+}
