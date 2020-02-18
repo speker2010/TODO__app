@@ -1,6 +1,6 @@
 'use strict';
 
-console.log('TODO version 1.0.0.1');
+console.log('TODO version 1.0.0.2');
 
 // вывод данных при нажатии enter
 
@@ -16,7 +16,7 @@ console.log('TODO version 1.0.0.1');
 // событие при нажатии кнопки submit
 
 function submitButton() {
-    var point = document.getElementsByClassName("form-control")[0];
+    let point = document.getElementById("content-input");
     console.log(point);
 
 
@@ -58,8 +58,7 @@ function addTodo(point) {
     elem.trash.classList.add('fa', 'fa-trash');
 
 
-    document.getElementsByClassName('attention')[0].style.display = 'none';
-    document.getElementsByTagName('input')[0].style.border = '0.5px solid grey';
+    document.getElementById('content-input').style.border = '0.5px solid grey';
 
     elem.down.style.display = 'none';
 
@@ -86,17 +85,15 @@ function resetPoint() {
 }
 
 function doIt() {
-    
+    this.closest('li').classList.remove('didnt');
     this.closest('li').classList.add('done');
-    this.closest('p').style.color = '#20be44b8';
-    this.closest('p').style.textDecoration = 'line-through';      
     this.style.display = 'none';
     this.nextSibling.style.display = 'block';
 }
 
 function didNot() {
-    this.closest('p').style.color = '#212529';
-    this.closest('p').style.textDecoration = 'none';
+    this.closest('li').classList.toggle('done');
+    this.closest('li').classList.toggle('didnt');
     this.previousSibling.style.display = 'block';
     this.style.display = 'none';    
 }
@@ -104,21 +101,21 @@ function didNot() {
 // функция изменения цвета ошибки
 
 function error() {
-    document.getElementsByClassName('attention')[0].style.display = 'block';
-    document.getElementsByTagName('input')[0].style.border = '0.5px solid red';
+    document.getElementById('error').style.display = 'block';
+    document.getElementById('content-input').style.border = '0.5px solid red';
 }
 
-document.getElementsByTagName("button")[3].addEventListener('click', submitButton);
+document.getElementById("enter__button").addEventListener('click', submitButton);
 
 console.log('hello');
 
 function resetButton() {
-    let point = document.getElementsByClassName("form-control")[0].value;
-    document.getElementsByClassName("form-control")[0].value = null;
-    document.getElementsByClassName("todo")[0].innerHTML = null;
+    let point = document.getElementById("content-input").value;
+    document.getElementById("content-input").value = null;
+    document.getElementById("todo-list").innerHTML = null;
 }
 
-document.getElementsByTagName("button")[0].addEventListener('click', resetButton);
+document.getElementById("reset__button").addEventListener('click', resetButton);
 
 function hideDone() {
     let elements = document.getElementsByClassName('done');
@@ -129,7 +126,7 @@ function hideDone() {
     }
 }  
 
-document.getElementsByTagName("button")[1].addEventListener('click', hideDone);
+document.getElementById("hide__button").addEventListener('click', hideDone);
 
 function showDone() {
     let elements = document.getElementsByClassName('done');
@@ -140,4 +137,4 @@ function showDone() {
     }
 }
 
-document.getElementsByTagName("button")[2].addEventListener('click', showDone);
+document.getElementById("show__button").addEventListener('click', showDone);
