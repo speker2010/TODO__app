@@ -79,7 +79,7 @@ function addTodo(point) {
     
 
 }
-// подсмотрел
+
 function resetPoint() {
     this.closest('li').remove(); 
 }
