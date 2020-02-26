@@ -22,7 +22,7 @@ jobs:
     - name: Build
       run: |
         gulp styles
-        mv bower_componets libs
+        mv bower_components libs
         sed -i 's/bower_components/libs/g' index.html
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
