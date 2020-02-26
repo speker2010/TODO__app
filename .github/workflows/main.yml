@@ -28,7 +28,7 @@ jobs:
     - name: Replace text
       uses: lefherz/action-sed@master
       with:
-        args: sed -ie "s/bower_components/libs/g" ./index.html
+        args: "sed -ie \"s/bower_components/libs/g\" ./index.html"
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
