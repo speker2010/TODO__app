@@ -2,8 +2,8 @@ name: CI
 
 on: 
   push:
-      branches:
-        - master
+    branches:
+      - master
 jobs:
   build:
 
@@ -11,9 +11,9 @@ jobs:
 
     steps:
     - name: Run a one-line script
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
     - name: Run a multi-line script
-    - uses: actions/setup-node@v1
+      uses: actions/setup-node@v1
     - name: Instal dependencies
       run: |
         npm i
