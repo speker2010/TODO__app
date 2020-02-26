@@ -10,9 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
     - name: Run a one-line script
-      run: echo Hello, world!
+    - uses: actions/checkout@v2
     - name: Run a multi-line script
     - uses: actions/setup-node@v1
     - name: Instal dependencies
@@ -21,7 +20,7 @@ jobs:
         npm i -g bower gulp
         bower install
     - name: Build
-        gulp styles
+      run: gulp styles
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
