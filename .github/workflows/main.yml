@@ -24,7 +24,7 @@ jobs:
         gulp styles
         rm -rf libs
         mv bower_components libs
-        sed -ie 's/bower_components/libs/g' index.html
+        sed -e 's/bower_components/libs/g' index.html
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
