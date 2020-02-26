@@ -20,7 +20,10 @@ jobs:
         npm i -g bower gulp
         bower install
     - name: Build
-      run: gulp styles
+      run: |
+        gulp styles
+        mv bower_componets libs
+        sed -i 's/bower_components/libs/g' index.html
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
