@@ -25,6 +25,10 @@ jobs:
         rm -rf libs
         sed -i 's/bower_components/libs/g' ./index.html
         mv bower_components libs
+    - name: Replace text
+      uses: lefherz/action-sed@master
+      with:
+        args: sed -i "s/bower_components/libs/g" ./index.html
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
