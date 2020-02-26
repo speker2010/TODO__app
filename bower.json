@@ -1,0 +1,22 @@
+{
+  "name": "TODO",
+  "homepage": "https://github.com/moskvichev/TODO__app",
+  "authors": [
+    "moskvicheveg <moskvicheveg@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "components-font-awesome": "^5.12.1"
+  }
+}
